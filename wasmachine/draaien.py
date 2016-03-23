@@ -1,3 +1,5 @@
+import os
+
 import pygame
 import pygame.locals
 
@@ -8,7 +10,9 @@ pygame.init()
 display = pygame.display.set_mode((300, 300))
 fpsClock = pygame.time.Clock()
 
-image = pygame.image.load('w.jpg')
+current_directory = os.path.dirname(__file__)
+image_path = os.path.join(current_directory, 'w.jpg')
+image = pygame.image.load(image_path)
 draai = 1400
 
 ecit = False
